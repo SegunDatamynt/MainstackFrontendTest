@@ -1,4 +1,4 @@
-// @ts-nocheck
+// @ts-ignore
 import  { useEffect, useState } from "react";
 import axios from "axios";
 // @ts-ignore
@@ -50,27 +50,33 @@ const FinancialGraph = () => {
         animationEnabled: true,
         axisX: {
             valueFormatString: " MMM DD, YYYY",
-
-
+            gridDashType:"dot",
+            gridThickness: -1
         },
         axisY: {
             lineThickness: 0,
             visible:false,
             title:"",
             valueFormatString: " ",
-
-
-
+            gridDashType:"dot",
+            gridThickness: -1
+        },
+        style:{
+            color: "text-red-800"
         },
         data: [{
             yValueFormatString: "$#,###",
             xValueFormatString: "DD MMM YYYY",
+            markerType: "none",
+            lineColor: "red",
             type: "spline",
             dataPoints: Array.isArray(userTransactions) ? (
-                userTransactions.map(transaction => ({
-                    x: new Date(transaction.date),
-                    y: transaction.amount
-                }))
+                userTransactions
+                    .filter(transaction => transaction.date && transaction.date.trim() !== "")
+                    .map(transaction => ({
+                        x: new Date(transaction.date),
+                        y: transaction.amount
+                    }))
             ) : (
                 []
             )
@@ -80,8 +86,8 @@ const FinancialGraph = () => {
     return (
         <>
 
-            <div>
-                <CanvasJSChart options = {options}
+            <div >
+                <CanvasJSChart className="" options = {options}
                 />
             </div>
         </>

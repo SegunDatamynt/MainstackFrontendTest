@@ -59,7 +59,7 @@ export default function Section1() {
                     </button>
                 </div>
                 </div>
-                <div className="p-6">
+                <div className="p-2 mr-[6em] mx-4">
                     <FinancialGraph/>
                 </div>
 
@@ -68,28 +68,28 @@ export default function Section1() {
             <div className=" col-span-2 ">
                 <div className="grid-cols-2 flex gap-6">
                     <div className="col-span-1">
-                        <div>
+                        <div className="mb-[2em]">
                           <span className="text-center text-[14px] text-gray-400">  Ledger Balance </span>
                         <p className="p-4 text-[28px] font-semibold">
                               USD {userWallet?.ledger_balance}
                              </p>
 
                     </div>
-                        <div>
+                        <div className="mb-[2em]">
                             <span className="text-center text-[14px] text-gray-400">  Total Payout </span>
                             <p className="p-4 text-[28px] font-semibold">
                                 USD {userWallet?.total_payout}
                             </p>
 
-                        </div>
-                        <div>
+                        </div >
+                        <div className="mb-[2em]">
                             <span className="text-center text-[14px] text-gray-400"> Total Revenue </span>
                             <p className="p-4 text-[28px] font-semibold">
                                 USD {userWallet?.total_revenue}
                             </p>
 
                         </div>
-                        <div>
+                        <div className="mb-[2em]">
                             <span className="text-center text-[14px] text-gray-400">  Pending Payout</span>
                             <p className="p-4 text-[28px] font-semibold">
                                 USD {userWallet?.pending_payout}
@@ -105,21 +105,21 @@ export default function Section1() {
                                   alt=""
                               />
                         </div>
-                        <div className="mx-6 my-[5em]">
+                        <div className="mx-6 my-[5em] mt-[7em]">
                             <img
                                 className="h-[15.83px] w-[15.83px] rounded-full"
                                 src={Info}
                                 alt=""
                             />
                         </div>
-                        <div className="mx-6 my-[5em]">
+                        <div className="mx-6 my-[5em]  mt-[7em]">
                             <img
                                 className="h-[15.83px] w-[15.83px] rounded-full"
                                 src={Info}
                                 alt=""
                             />
                         </div>
-                        <div className="mx-6 my-[5em]">
+                        <div className="mx-6 my-[5em]  mt-[7.5em]">
                             <img
                                 className="h-[15.83px] w-[15.83px] rounded-full"
                                 src={Info}

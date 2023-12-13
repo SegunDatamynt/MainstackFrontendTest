@@ -50,7 +50,7 @@ export default function TransactionDetails(){
 
     return (
         <>
-        <div className="grid grid-cols-3 py-12">
+        <div className="grid grid-cols-3 py-12 pl-[14em]">
 
             <div className="col-span-2">
                 <span className="p-8 text-[24px] font-semibold">{userTransactions.length} Transactions</span>
@@ -98,8 +98,8 @@ export default function TransactionDetails(){
 
         </div>
 
-            <hr className="h-10 w-auto mx-[3em]"/>
-            <div className="grid grid-cols-4">
+            <hr className="h-10 w-auto mx-[15em] -mt-[4em]"/>
+            <div className="grid grid-cols-4  pl-[14em]">
 
                 <div className="col-span-3">
 
@@ -135,7 +135,7 @@ export default function TransactionDetails(){
                 )}
                 </div>
 
-                <div>
+                <div className="ml-[3em]">
                     {Array.isArray(userTransactions) ? (
                         userTransactions.map((transaction, index) => (
                             <div key={index} className="my-4">
